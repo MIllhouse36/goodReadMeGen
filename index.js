@@ -63,12 +63,15 @@ const questions =
 
 // function to write README file
 function writeToFile(fileName, data) {
+  
   inquirer.prompt(questions)
   .then(function(data){
     const fileMd = generateMd(data)
-    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+    console.log(fileMd)
+    const queryUrl = `https://api.github.com/users/${data.username}/repos?per_page=100`;
     axios.get(queryUrl)
-        .then(function(res){
+        .then(function(){
+          fs.writeFile()
     
     })
 

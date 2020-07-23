@@ -7,10 +7,9 @@ function generateMarkdown(data) {
   ## ${data.Descriptions}
   ## ${data.Test}
   ## ${data.Contribution}
-  ## ${data.Questions} 
-
-  
-
+  ## Questions 
+     ${data.username}
+     ${data.email}
 `;
 }
 
