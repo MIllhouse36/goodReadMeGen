@@ -1,11 +1,13 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const axios = require(`axios`)
 const fileName = "README.md";
 const generateMd = require("./utils/generateMarkdown")
 // array of questions for user
 const questions =
 [ 
 {
+  
   type: "input",
   name: "username",
   message: "What is your Github username?"
@@ -17,7 +19,7 @@ const questions =
 },
 {
   type: "input",
-  name: "projectname",
+  name: "title",
   message: "What is your project's name?"
 },
 {
@@ -27,12 +29,18 @@ const questions =
 },
 {
   type: "list",
-  name: "Licenses",
-  message: "What kind of license should your project have?"
+  name: "License",
+  message: "What kind of license should your project have?",
+  choices: [
+    "MIT", 
+    "APACHE", 
+    "BSD", 
+    "WTFPL"
+  ]
 },
 {
   type: "input",
-  name: "Installations",
+  name: "Installation",
   message: "What command should we run to install dependencies?"
 },
 
@@ -43,12 +51,12 @@ const questions =
 },
 {
   type: "input",
-  name: "usage",
+  name: "Usage",
   message: "What does the user need to know about using the repo?"
 },
 {
   type: "input",
-  name: "Contributions",
+  name: "Contribution",
   message: "What does the user need to know about contributing to the repo?"
 }, 
 ];
@@ -56,14 +64,21 @@ const questions =
 // function to write README file
 function writeToFile(fileName, data) {
   inquirer.prompt(questions)
-  .then(function(res){
+  .then(function(data){
+    const fileMd = generateMd(data)
+    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+    axios.get(queryUrl)
+        .then(function(res){
+    
+    })
+
     
   })
 }
 
 // function to initialize program
 function init() {
-
+writeToFile()
 }
 
 // function call to initialize program
