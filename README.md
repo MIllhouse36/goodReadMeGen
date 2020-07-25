@@ -1,12 +1,13 @@
-# goodreadme 
+
+# goodReadMe 
 ## Table of Contents 
+[Descriptions](#Descriptions)
+
 [Installation](#Installation)
 
 [Usage](#Usage)
 
 [License](#License)
-
-[Descriptions](#Descriptions)
 
 [Test](#Test)
 
@@ -14,17 +15,17 @@
 
 [Questions](#Questions)
 
+## Descriptions
+its a read me generator check it out!
 ## Installation
-npm in
+npm i
 ## Usage
-it cool 
+I made it myself :D
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-## Descriptions
-sjhsahh
 ## Test
-test
+npm test
 ## Contributions
-jsj
+just open a pull request
 ## Questions 
 If you have and questions contact me @ [MIhouse](https://github.com/MIllhouse36) or [Email](https://Millhousekevin@gmail.com)

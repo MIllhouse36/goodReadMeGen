@@ -30,8 +30,7 @@ ${data.Test}
 ## Contributions
 ${data.Contribution}
 ## Questions 
-https://github.com/${data.username}
-https://${data.email}
+If you have and questions contact me @ [MIhouse](https://github.com/${data.username}) or [Email](https://${data.email})
 `;
 }
 

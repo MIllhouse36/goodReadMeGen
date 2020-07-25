@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require(`axios`)
 const generateMd = require("./utils/generateMarkdown")
+
 // array of questions for user
 const questions =
 [ 
@@ -65,15 +66,11 @@ function writeToFile(fileName ) {
   .then(function(data){
     const fileMd = generateMd(data)
     console.log(fileMd)
-    const queryUrl = `https://api.github.com/users/${data.username}/repos?per_page=100`;
-    axios.get(queryUrl)
-    .then(function(){
-      fs.writeFile(fileName, fileMd, function(error){
-        // if (error){
-        //   throw(error)
-        // } 
-      })
-      
+  
+    fs.writeFile(fileName, fileMd, function(error){
+      if (error){
+        throw(error)
+      } 
     })
     
     
