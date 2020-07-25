@@ -79,7 +79,7 @@ function writeToFile(fileName ) {
 
 // function to initialize program
 function init() {
-writeToFile("README.md")
+writeToFile("READMEsample.md")
 }
 
 // function call to initialize program
